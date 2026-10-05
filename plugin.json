@@ -1,0 +1,18 @@
+{
+  "id": "nodebb-plugin-ege-yemekhane",
+  "name": "Ege Yemekhane",
+  "description": "Ege Üniversitesi SKS aylık yemek listelerini otomatik çeker ve /yemekhane sayfasında gösterir.",
+  "library": "./library.js",
+  "hooks": [
+    { "hook": "static:app.load", "method": "init" },
+    { "hook": "static:api.routes", "method": "addApiRoutes" },
+    { "hook": "filter:navigation.available", "method": "addNavigation" },
+    { "hook": "filter:admin.header.build", "method": "addAdminNavigation" }
+  ],
+  "templates": "templates",
+  "scss": ["public/yemekhane.scss"],
+  "modules": {
+    "../client/yemekhane.js": "public/yemekhane.js",
+    "../admin/plugins/ege-yemekhane.js": "public/admin.js"
+  }
+}

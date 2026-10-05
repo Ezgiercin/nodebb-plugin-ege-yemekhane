@@ -1,0 +1,141 @@
+// Ege Yemekhane — Bootstrap 5 / Harmony değişkenleriyle uyumlu
+.ege-yemekhane {
+	--ey-blue-1: #0b2f6b;
+	--ey-blue-2: #1d5bb5;
+	--ey-accent: #c0392b;
+	max-width: 1100px;
+	margin: 0 auto;
+
+	.ey-card {
+		background: var(--bs-body-bg);
+		border: 1px solid var(--bs-border-color);
+		border-radius: 1rem;
+		overflow: hidden;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	}
+
+	.ey-header {
+		background: linear-gradient(120deg, var(--ey-blue-1), var(--ey-blue-2));
+		color: #fff;
+		padding: 1.25rem 1.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.ey-logo {
+		width: 48px; height: 48px;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.15);
+		display: grid; place-items: center;
+		font-size: 1.3rem;
+	}
+	.ey-title { font-size: 1.35rem; font-weight: 700; margin: 0; color: #fff; }
+	.ey-sub { font-size: 0.85rem; opacity: 0.8; }
+
+	.ey-meals {
+		display: flex;
+		background: rgba(255, 255, 255, 0.15);
+		border-radius: 12px;
+		padding: 4px;
+		gap: 4px;
+	}
+	.ey-meal {
+		border: 0;
+		background: transparent;
+		color: rgba(255, 255, 255, 0.85);
+		font-weight: 600;
+		padding: 0.5rem 1rem;
+		border-radius: 9px;
+		white-space: nowrap;
+		&.active { background: #fff; color: var(--ey-blue-1); }
+		&:not(.active):hover { background: rgba(255, 255, 255, 0.12); }
+	}
+
+	.ey-toolbar {
+		padding: 1rem 1.5rem 0.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+	.ey-diets { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+	.ey-diet {
+		border: 1px solid var(--bs-border-color);
+		background: var(--bs-body-bg);
+		color: var(--bs-body-color);
+		border-radius: 999px;
+		padding: 0.3rem 0.9rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+		&.active { background: var(--ey-blue-2); border-color: var(--ey-blue-2); color: #fff; }
+	}
+
+	.ey-strip-wrap { display: flex; align-items: center; gap: 0.5rem; }
+	.ey-nav {
+		flex: 0 0 auto;
+		border: 1px solid var(--bs-border-color);
+		background: var(--bs-body-bg);
+		color: var(--bs-body-color);
+		width: 32px; height: 32px;
+		border-radius: 8px;
+		&:disabled { opacity: 0.35; }
+	}
+	.ey-strip {
+		display: flex;
+		gap: 4px;
+		overflow-x: auto;
+		scrollbar-width: thin;
+		padding-bottom: 4px;
+		flex: 1 1 auto;
+	}
+	.ey-strip-day {
+		flex: 0 0 44px;
+		border: 1px solid transparent;
+		background: var(--bs-tertiary-bg);
+		color: var(--bs-body-color);
+		border-radius: 8px;
+		padding: 4px 0;
+		display: flex; flex-direction: column; align-items: center;
+		line-height: 1.15;
+		span { font-size: 0.7rem; opacity: 0.7; }
+		strong { font-size: 0.95rem; }
+		&.weekend { opacity: 0.7; }
+		&.today { border-color: var(--ey-accent); }
+		&.active { background: var(--ey-blue-1); color: #fff; opacity: 1; }
+	}
+
+	.ey-days { border-top: 1px solid var(--bs-border-color); margin-top: 0.75rem; }
+	.ey-day {
+		padding: 1.25rem 1.5rem 1.5rem;
+		& + .ey-day { border-left: 1px solid var(--bs-border-color); }
+	}
+	@media (max-width: 767.98px) {
+		.ey-day + .ey-day { border-left: 0; border-top: 1px solid var(--bs-border-color); }
+		.ey-header { padding: 1rem; }
+		.ey-toolbar, .ey-day { padding-left: 1rem; padding-right: 1rem; }
+		.ey-meals { width: 100%; }
+		.ey-meal { flex: 1; padding: 0.5rem; }
+	}
+	.ey-day-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--bs-secondary-color); }
+	.ey-day-date { font-size: 1.25rem; font-weight: 700; color: var(--ey-blue-2); &.is-today { color: var(--ey-accent); } }
+	.ey-day-name { font-size: 0.9rem; color: var(--bs-secondary-color); margin-bottom: 0.75rem; }
+	.ey-items li {
+		padding: 0.6rem 0 0.6rem 1.25rem;
+		border-bottom: 1px solid var(--bs-border-color-translucent);
+		&:last-child { border-bottom: 0; }
+	}
+	.ey-empty {
+		padding: 1.5rem 1rem;
+		background: var(--bs-tertiary-bg);
+		border-radius: 10px;
+		color: var(--bs-secondary-color);
+		text-align: center;
+	}
+	.ey-foot {
+		border-top: 1px solid var(--bs-border-color);
+		padding: 0.6rem 1.5rem;
+		font-size: 0.8rem;
+		color: var(--bs-secondary-color);
+	}
+}

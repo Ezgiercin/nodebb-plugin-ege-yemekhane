@@ -1,0 +1,14 @@
+{
+  "name": "nodebb-plugin-ege-yemekhane",
+  "version": "1.0.0",
+  "description": "Ege Üniversitesi yemekhane menüsü (SKS aylık listelerinden otomatik)",
+  "main": "library.js",
+  "license": "MIT",
+  "keywords": ["nodebb", "plugin", "ege", "yemekhane"],
+  "nbbpm": { "compatibility": "^3.0.0 || ^4.0.0" },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "word-extractor": "^1.0.4"
+  }
+}
